@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number to Message Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input[type="number"] {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        #message {
+            margin-top: 20px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <input type="number" id="numberInput" placeholder="Enter a number">
+    <button onclick="convertNumber()">Convert</button>
+    <p id="message"></p>
+
+    <script>
+        var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44];
+        var messages = ["愿你的生活如同一幅画，不只追求完美，更追求色彩斑斓。", "愿你的每一次尝试，都能让你更加了解自己，更加快乐。", "愿你的每一次挑战，都能成为自我成长的契机，让你更加坚强和快乐。", "愿你的每一次冒险，都能带来新的视野，让你的世界更加宽广。", "愿你的每一次付出，都能换来内心的充实和宁静。", "愿你的每一次努力，都能让你更加接近真正的自我。", "愿你的每一次探索，都能发现新的乐趣，让你的生活更加多彩。", "毕业之际，愿你找到属于自己的成功。", "愿你的生活充满欢笑，因为快乐是最真实的成功。", "愿你的每一步都伴随着内心的平静和满足。", "成功不只一种模样，愿你找到属于自己的那一种。", "愿你在追求梦想的同时，不忘享受沿途的风景。", "愿你的生活像一首优美的诗，不急不躁，自有韵律。", "愿你在追求成就的同时，也不忘享受生活的每一份甜蜜。", "愿你的每一天都充满阳光，即使在雨天，也能心中有彩虹。", "愿你的每一次选择，都能让你更接近内心的快乐。", "毕业是新旅程的开始，愿你的每一步都充满希望。", "知识的海洋宽广无垠，愿你勇敢探索，发现更多奇迹。", "智慧的光芒将照亮你的未来，愿你前程似锦。", "梦想的翅膀已经展开，愿你飞得更高，看得更远。", "学识的积累是你最宝贵的财富，愿你善用它，开创辉煌。", "每一次挑战都是成长的机会，愿你勇敢面对，收获满满。", "你的才华如同璀璨的星辰，必将在夜空中熠熠生辉。", "愿你的未来如同星辰大海，璀璨而辽阔。", "知识的翅膀已经展开，愿你翱翔于梦想的天空。", "愿你的明天，比今天更加辉煌灿烂。", "愿你的才华如春日暖阳，温暖而明亮。", "愿你的前程，如同夏日繁花，绚烂多彩。", "愿你的智慧，如同秋日硕果，丰硕而甜美。", "愿你的毅力，如同冬日松柏，坚韧而常绿。", "愿你的每一步，都踏在成功的节拍上。", "愿你的每一次选择，都通向光明的未来。", "愿你的学识，成为你人生旅途中最亮的灯塔。", "愿你的梦想，如同晨曦，照亮你前行的道路。", "愿你的才华，如同夜空中最亮的星，引领你前行。", "愿你的每一步，都充满勇气和力量。", "愿你们在追求目标的路上，总能遇到意外的惊喜和好运，心想事成。", "愿你们的每一个愿望都能被听见，每一个梦想都能实现。", "愿你们在人生的旅途中，总能遇到指引你们前行的灯塔，心想事成。", "愿你们的每一个决定都充满智慧，每一个选择都带来幸福。", "愿幸运之神常伴你左右，每一天都充满惊喜。", "愿你的每一步都踏在幸运的节拍上，事事顺心。", "愿好运如同阳光，温暖你的每一个清晨和夜晚。", "愿你在人生的旅途中，总能与好运不期而遇。"];
+
+        function convertNumber() {
+            var number = document.getElementById("numberInput").value;
+            var message = "";
+
+            if (number >= 1 && number <= 44) {
+                message = messages[number - 1];
+            } else {
+                message = "请输入 1 到 44 之间的数字";
+            }
+
+            document.getElementById("message").textContent = message;
+        }
+    </script>
+</body>
+</html>
